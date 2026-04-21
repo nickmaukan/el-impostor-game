@@ -230,7 +230,7 @@ class _SoloGameScreenState extends State<SoloGameScreen> {
           Text('Tu nombre', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 8),
           TextField(
-            onChanged: (v) => _playerName = v,
+            onChanged: (v) => setState(() => _playerName = v),
             decoration: InputDecoration(
               hintText: 'Ej: Juan',
               filled: true,
