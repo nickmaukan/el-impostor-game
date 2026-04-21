@@ -6,6 +6,7 @@ import 'screens/create_room_screen.dart';
 import 'screens/join_room_screen.dart';
 import 'screens/game_screen.dart';
 import 'screens/result_screen.dart';
+import 'screens/solo_game_screen.dart';
 
 void main() {
   runApp(const ImpostorApp());
@@ -28,6 +29,7 @@ class ImpostorApp extends StatelessWidget {
           GoRoute(path: '/join', builder: (context, state) => const JoinRoomScreen()),
           GoRoute(path: '/game', builder: (context, state) => const GameScreen()),
           GoRoute(path: '/result', builder: (context, state) => const ResultScreen()),
+          GoRoute(path: '/solo', builder: (context, state) => const SoloGameScreen()),
         ],
       ),
     );

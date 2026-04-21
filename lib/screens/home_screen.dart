@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Spacer(),
+                const SizedBox(height: 32),
                 // Buttons
                 ElevatedButton(
                   onPressed: () => context.push('/create'),
@@ -115,7 +115,41 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 48),
+                const SizedBox(height: 16),
+                // Modo Solo button
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF10B981), Color(0xFF059669)],
+                    ),
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () => context.push('/solo'),
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(double.infinity, 60),
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent,
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.phone_android),
+                        SizedBox(width: 12),
+                        Text('MODO SOLO'),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'Juega en un solo dispositivo con simulated players',
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: Colors.white54,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const Spacer(),
               ],
             ),
           ),
